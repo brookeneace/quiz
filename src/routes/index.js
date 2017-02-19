@@ -63,7 +63,7 @@ router.post('/files', function(req, res, next) {
 // });
 
 router.get('/', function(req, res){
-	res.render('index', {title: 'My template', message: 'Hey wassssup'} )
+	res.render('index', {title: 'Your wine personality', message: 'Wine Quiz'} )
 });
 
 router.use(function(req, res, next) {
