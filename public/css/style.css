@@ -1,3 +1,45 @@
+*{
+	box-sizing: border-box; 
+}
+
+body, html{
+	font-family: 'Oswald', sans-serif;
+	background: #fff;
+	padding: 0; 
+	margin: 0; 
+	font-size: 16px;
+}
+
 h1{
 	color: red; 
+}
+
+.wrapper{
+	background: #fff; 
+	max-width: 700px; 
+	margin: 0 auto; 
+	padding: 30px;
+}
+
+ul{
+	margin: 0; padding: 0; 
+}
+
+li{
+	list-style-type: none; 
+	padding: 20px; 
+	width: 48%; 
+	margin: 1%;
+	display: inline-block; 
+	text-align: center;
+	background-color: #efefef;
+	border: 1px solid #ccc;
+}
+
+button{
+	background: red; 
+	border: 0px; 
+	padding: 20px; 
+	color: #fff;
+	margin: 10px 0; 
 }

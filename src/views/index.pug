@@ -1,12 +1,17 @@
-html
+html(ng-app="wineQuizApp")
 	head
+		link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Oswald')
 		link(rel='stylesheet', href='/css/style.css')
 		script(src='/js/app.js')
 		title= title
+		script(src="/js/module/app.module.js")
+		script(src="/js/module/wine.module.js")
+		script(src="/js/component/wine.component.js")
 	body
-		h1= message
-		p Find out what wine suits your personality best
-		div
+		div(class='wrapper')
+			h1= message
+			p Find out what wine suits your personality best
+		
 			h2 Choose a dessert
 			ul 
 				li Chocolate cake
@@ -37,4 +42,5 @@ html
 				li Swiss
 				li Bleu 
 				li Parmesan
-				
+			button See results
+			wine-list

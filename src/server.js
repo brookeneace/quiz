@@ -5,6 +5,15 @@ const router     = require('./routes');
 const bodyParser = require('body-parser');
 const path = require('path'); 
 
+// Load mongoose package
+const mongoose = require('mongoose');
+
+// Connect to MongoDB and create/use database as configured
+mongoose.connect(`mongodb://${config.db.host}/${config.db.dbName}`);
+
+// Import all models
+require('./models/file.model.js');
+
 const app = express();
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
