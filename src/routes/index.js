@@ -1,26 +1,17 @@
 // src/routes/index.js
 const mongoose = require('mongoose');
 const router = require('express').Router();
-const wineController = require('./controllers/wine.controller');
+const fileController = require('./controllers/file.controller');
 
 module.exports = router;
 
-router.get('/results', wineController.list);
+router.get('/files', fileController.list);
+router.put('/files/:fileId', fileController.update);
+router.delete('/files/:fileId', fileController.delete);
 
-/*
-router.post('/results', function(req, res, next) {
-  const newWine = {
-    winename: req.body.winename,
-    description: req.body.description
-  };
-
-  wines.push(newWine);
-  res.json(wines);
+router.get('/', (req,res) => {
+  res.render('index',
+    {title: 'Find out what wine suits your personality',
+    message: 'Wine Quiz'});
 });
-*/
 
-
-
-router.get('/', function(req, res){
-	res.render('index', {title: 'Your wine personality', message: 'Wine Quiz'} )
-});

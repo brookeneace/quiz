@@ -1,0 +1,38 @@
+
+<form action ="">
+<div class="question" ng-repeat="file in $ctrl.files">
+<h2>{{file.qname}}</h2>
+	<div class="row">
+	  <input type="radio" name="q{{$index + 1}}" value="1" id="q1{{$index + 1}}"> <label for="q1{{$index + 1}}">{{file.choose1}}</label>
+	  <input type="radio" name="q{{$index + 1}}" value="2" id="q2{{$index + 1}}"> <label for="q2{{$index + 1}}">{{file.choose2}}</label>
+	</div>
+	<div class="row">
+	  <input type="radio" name="q{{$index + 1}}" value="3" id="q3{{$index + 1}}"> <label for="q3{{$index + 1}}">{{file.choose3}}</label>
+	  <input type="radio" name="q{{$index + 1}}" value="4" id="q4{{$index + 1}}"> <label for="q4{{$index + 1}}">{{file.choose4}}</label>
+	</div>
+</div>
+<input type="Submit" value="Get Results">
+</form>
+<!-- public/js/template/file-list.template.html -->
+
+
+
+<!--
+<div ng-show="$ctrl.selectedFile">
+  <h4>Editing: {{$ctrl.selectedFile.title}}</h4>
+  <fieldset>
+    <div>
+      <label>Title: <input ng-model="$ctrl.selectedFile.title" /></label>
+    </div>
+    <div>
+      <label>Filename: <input ng-model="$ctrl.selectedFile.filename" /></label>
+    </div>
+    <div>
+      <button ng-click="$ctrl.updateFile($ctrl.selectedFile)">Update File</button>
+      <button ng-click="$ctrl.deleteFile($ctrl.selectedFile)">Delete</button>
+    </div>
+  </fieldset>
+</div>
+-->
+
+

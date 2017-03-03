@@ -1,25 +1,28 @@
 // Load mongoose package
 const mongoose = require('mongoose');
 
-const WineSchema = new mongoose.Schema({
-  winename: String,
-  description: String,
+const FileSchema = new mongoose.Schema({
+  qname: String,
+  choose1: String,
+  choose2: String,
+  choose3: String,
+  choose4: String,
   updated_at: { type: Date, default: Date.now },
 });
 
-const Wine = mongoose.model('Wine', WineSchema);
+const File = mongoose.model('File', FileSchema);
 
-module.exports = Wine
+module.exports = File
 
-Wine.count({}, function(err, count) {
+File.count({}, function(err, count) {
   if (err) {
     throw err;
   }
   // ...
   if (count > 0) return;
 
-	const wines = require('./file.seed.json');
-	Wine.create(wines, function(err, newWines) {
+	const files = require('./file.seed.json');
+	File.create(files, function(err, newFiles) {
 		if (err) {
 			throw err;
 		}

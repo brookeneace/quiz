@@ -1,46 +1,15 @@
-html(ng-app="wineQuizApp")
+doctype html
+html(ng-app="fileListApp")
 	head
-		link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Oswald')
-		link(rel='stylesheet', href='/css/style.css')
-		script(src='/js/app.js')
+		link(rel="stylesheet", href="/css/style.css")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans")
+		script(src="/node_modules/angular/angular.min.js")
+		script(src="/node_modules/jquery/dist/jquery.min.js")
 		title= title
 		script(src="/js/module/app.module.js")
-		script(src="/js/module/wine.module.js")
-		script(src="/js/component/wine.component.js")
+		script(src="/js/module/file-list.module.js")
+		script(src="/js/component/file-list.component.js")
 	body
 		div(class='wrapper')
 			h1= message
-			p Find out what wine suits your personality best
-		
-			h2 Choose a dessert
-			ul 
-				li Chocolate cake
-				li Apple pie
-				li Ice cream
-				li Cheesecake
-			h2 Pick your ideal dinner
-			ul 
-				li Filet mignon and potatoes
-				li Grilled fish and steamed vegetables
-				li Burger and fries
-				li Pasta
-			h2 Choose your ideal vacation
-			ul
-				li Relaxing on the beach 
-				li Gambling in Vegas
-				li Trekking though a European city
-				li Hiking in the mountains
-			h2 Pick your favorite music genre
-			ul
-				li Classic Rock
-				li R & B
-				li Country
-				li Classical
-			h2 Choose your favorite type of cheese
-			ul 
-				li Cheddar 
-				li Swiss
-				li Bleu 
-				li Parmesan
-			button See results
-			wine-list
+			file-list

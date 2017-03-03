@@ -1,6 +1,7 @@
 [
-  {"winename": "Riesling", "description":"You like the simple things in life. Riesling wines are typically varietally pure and unoaked white wines. Riesling tends to be lighter weight and pairs well with a wider range of foods than most white wines. Rieslings are acidic but also sweet. Like your choices, Riesling suits you because you can adapt to many situations. Cheers! "},
-  {"winename": "Pinot Grigio", "description":"You have interesting taste! "},
-  {"winename": "Pinot Noir", "description":"You're well balanced. "},
-  {"winename": "Bordeaux", "description":"You fancy, huh? "}
+  {"qname": "Choose a dessert", "choose1":"Ice Cream", "choose2":"Apple pie","choose3":"Cheesecake","choose4":"Chocolate cake"},
+  {"qname": "Pick your ideal dinner", "choose1":"Burger and fries", "choose2":"Pasta","choose3":"Filet mignon and potatoes","choose4":"Grilled fish and steamed vegetables"},
+  {"qname": "Choose your ideal vacation", "choose1":"Gambling in Vegas", "choose2":"Relaxing on the beach ","choose3":"Hiking in the mountains","choose4":"Trekking though a European city"},
+  {"qname": "Pick your favorite music genre", "choose1":"Country", "choose2":"R&B","choose3":"Classic Rock","choose4":"Classical"},
+  {"qname": "Choose your favorite type of cheese","choose1":"Cheddar", "choose2":"Parmesan","choose3":"Swiss","choose4":"Bleu"}
 ]
