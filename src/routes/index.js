@@ -2,12 +2,12 @@
 const mongoose = require('mongoose');
 const router = require('express').Router();
 const fileController = require('./controllers/file.controller');
+const wineController = require('./controllers/wine.controller');
 
 module.exports = router;
 
 router.get('/files', fileController.list);
-router.put('/files/:fileId', fileController.update);
-router.delete('/files/:fileId', fileController.delete);
+router.get('/wines', wineController.list);
 
 router.get('/', (req,res) => {
   res.render('index',

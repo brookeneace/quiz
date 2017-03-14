@@ -59,6 +59,7 @@ function answerScore() {
 		document.querySelector('form').style.display ='none';
 	}
 	
+	//calculate sums and display answer based on range 
 	if(sum >= 15){
 		console.log('you have 15 or more points');
 		console.log(responses[3]);

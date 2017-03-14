@@ -1,4 +1,3 @@
-
 <form>
 <div class="question" ng-repeat="file in $ctrl.files">
 <h2>{{file.qname}}</h2>
@@ -19,26 +18,7 @@
 <div ng-show="wineAnswer" id="wineAnswer">
 	<h2></h2>
 	<p></p>
-	<button>Retake Quiz</button>
+	<button onClick="window.location.reload()">Retake Quiz</button>
 </div>
-
-
-<!--
-<div ng-show="$ctrl.selectedFile">
-  <h4>Editing: {{$ctrl.selectedFile.title}}</h4>
-  <fieldset>
-    <div>
-      <label>Title: <input ng-model="$ctrl.selectedFile.title" /></label>
-    </div>
-    <div>
-      <label>Filename: <input ng-model="$ctrl.selectedFile.filename" /></label>
-    </div>
-    <div>
-      <button ng-click="$ctrl.updateFile($ctrl.selectedFile)">Update File</button>
-      <button ng-click="$ctrl.deleteFile($ctrl.selectedFile)">Delete</button>
-    </div>
-  </fieldset>
-</div>
--->
 
 

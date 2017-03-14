@@ -10,9 +10,19 @@ const FileSchema = new mongoose.Schema({
   updated_at: { type: Date, default: Date.now },
 });
 
+const WineSchema = new mongoose.Schema({
+  winename: String,
+  winedesc: String,
+  updated_at: { type: Date, default: Date.now },
+});
+
 const File = mongoose.model('File', FileSchema);
 
+const Wine = mongoose.model('Wine', WineSchema);
+
 module.exports = File
+
+module.exports = Wine
 
 File.count({}, function(err, count) {
   if (err) {
@@ -27,5 +37,21 @@ File.count({}, function(err, count) {
 			throw err;
 		}
 		console.log("DB seeded")
+	});
+});
+
+Wine.count({}, function(err, count) {
+  if (err) {
+    throw err;
+  }
+  // ...
+  if (count > 0) return;
+
+	const wines = require('./wine.seed.json');
+	Wine.create(wines, function(err, newWines) {
+		if (err) {
+			throw err;
+		}
+		console.log("Wine DB seeded")
 	});
 });
