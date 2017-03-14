@@ -23,6 +23,7 @@ body, html{
 
 h1{
 	color: red; 
+	border-bottom: 2px solid red;
 }
 
 .wrapper{
@@ -54,6 +55,10 @@ label{
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
+    display: flex;
+    align-self: center; 
+    align-items: center;
+	justify-content: center;
 }
 
 .row {
@@ -63,6 +68,9 @@ label{
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    align-items: center;
+	justify-content: center;
+	
 }
 
 li:nth-child(odd), label:nth-child(odd){
@@ -71,6 +79,7 @@ li:nth-child(odd), label:nth-child(odd){
 
 label:hover{
 	cursor: pointer;
+	background: orange;
 }
 
 input:checked + label {
@@ -81,7 +90,7 @@ input[type=radio]{
 	display: none; 
 }
 
-button, input[type=submit]{
+button, input[type=submit],  input[type=button]{
 	background: red; 
 	border: 0px; 
 	padding: 20px; 
