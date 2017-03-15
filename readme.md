@@ -1,7 +1,7 @@
 # Wine quiz
 
 ## Overview
-This is a quiz with 5 questions, and the result gives the user a different type of wine based on their answers. The front end is done with Angular JS and javascript. The back end is done using mongo, mongoose, express, node. 
+This is a quiz with 5 questions. The result gives the user a different type of wine based on the answers the user chose. 
 
 ## Installation
 In order to run this project, you'll need to have **npm, nodejs and monogodb** installed on your computer. 
@@ -16,7 +16,3 @@ In order to run this project, you'll need to have **npm, nodejs and monogodb** i
 1. There is no validation on the quiz form which is something I would like to add if I had more time to make this more user friendly. 
 
 2. I would also like to add a picture, and social share to the results to make this more  engaging for the user. 
-
-
-## Other project notes 
-NoSQL database and angular are completely new to me and I found this project both interesting and challenging. In the interest of getting this completed on time I did fall back on using vanilla javascript a little more than I wanted to (instead of angular) in the view portions. 
