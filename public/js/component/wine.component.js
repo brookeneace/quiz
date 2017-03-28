@@ -4,51 +4,19 @@ angular.module("fileList").component("fileList",{
     var self = this;
 	
 
-	this.getFiles = () => {
+	this.getWines = () => {
 	  return $http.get("/files").then(function(response){
 	    return self.files=response.data;
 	  });
 	}
-	this.getFiles();
-	    
-   this.selectFile = (file) => {
-	  // get the currently selected file and set the `selected`
-	  // property to false
-	  const currentlySelected = this.selectedFile;
-	  this.selectedFile = null;
+	this.getWines();
 	
-	  // Mark the passed file as selected
-	  if (!currentlySelected || currentlySelected._id !== file._id) {
-	    this.selectedFile = angular.copy(file);
-	  }
-	}
-    
-    
-    //update file
-    this.updateFile = (file) => {
-
-	  $http.put(`/files/${file._id}`, {file})
-	    .then(response => {
-	      console.log("Successfully updated file");
-	      return this.getFiles();
-	    })
-	    .catch(err => {
-	      console.log("Oops...there was an error", err);
-	    })
-	}
-	
-	
-	// Delete a file
-	this.deleteFile = (file) => {
-	  $http.delete(`/files/${file._id}`)
-	    .then(response => {
-	      console.log("Successfully deleted file");
-	      this.selectedFile = null;
-	      return this.getFiles();
-	    })
-	    .catch(err => {
-	      console.log("Drat...there was an error", err);
-	    })
-	}	    
+	 this.createAnswer = () => {
+      this.selectedFile = {
+        filename: "",
+        title: ""
+      };
+    }
+	     	    
   }
 });
