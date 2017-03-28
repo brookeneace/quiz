@@ -68,8 +68,12 @@ label{
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    align-self: center;
     align-items: center;
 	justify-content: center;
+	-webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 	
 }
 
@@ -115,4 +119,15 @@ button:hover, input[type=submit]:hover,  input[type=button]:hover{
 .question{
 	overflow: auto;
 	margin-bottom: 40px;
+}
+
+@media(max-width:600px){
+	button, input[type=submit], input[type=button], button.delete{
+		width: 100%; 
+		margin:15px 0; 
+	}
+	
+	li, label{
+    min-height: 130px;
+	}
 }

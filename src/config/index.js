@@ -4,7 +4,7 @@ const config = {
   port: 8080,
   db: {
     host: 'localhost',
-    dbName: 'quizQ',
+    dbName: 'quizQA',
   }
 }
 
