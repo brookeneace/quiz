@@ -18,7 +18,12 @@
 <div ng-show="wineAnswer" id="wineAnswer">
 	<h2></h2>
 	<p></p>
-	<button onClick="window.location.reload()">Retake Quiz</button>
+	<button onClick="window.location.reload()">Retake Quiz</button> <button class="delete" onclick='deleteScore()' ng-click="deleteMessage = !deleteMessage">Delete result</button>
 </div>
 
+
+<div ng-show="deleteMessage">
+	<h2>Your entry has been deleted.</h2>
+	<button onClick="window.location.reload()">Retake Quiz</button>
+</div>
 

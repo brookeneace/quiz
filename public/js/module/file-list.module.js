@@ -1,5 +1,7 @@
 angular.module("fileList",[]);
 
+
+//responses object to print and save to database
 var responses = [
   {
 	  winename: "Riesling",
@@ -83,6 +85,9 @@ function answerScore() {
 	}
 }
 
+function deleteScore() {
+	document.getElementById("wineAnswer").style.display='none';
+}
 
 
 

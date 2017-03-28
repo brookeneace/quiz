@@ -1,7 +1,7 @@
 # Wine quiz
 
 ## Overview
-This is a quiz with 5 questions. The result gives the user a different type of wine based on the answers the user chose. 
+This is a quiz with 5 questions. The result gives the user a different type of wine based on the answers they chose. 
 
 ## Installation
 In order to run this project, you'll need to have **npm, nodejs and monogodb** installed on your computer. 
