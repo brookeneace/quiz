@@ -31,7 +31,7 @@ File.count({}, function(err, count) {
   // ...
   if (count > 0) return;
 
-	const files = require('./file.seed.json');
+	const files = require('./questions.seed.json');
 	File.create(files, function(err, newFiles) {
 		if (err) {
 			throw err;

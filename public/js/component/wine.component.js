@@ -1,5 +1,5 @@
 angular.module("fileList").component("fileList",{
-  templateUrl: "/js/template/file-list.template.html",
+  templateUrl: "/js/template/wine.template.html",
   controller: function FileListController($http){
     var self = this;
 	

@@ -12,7 +12,7 @@ const mongoose = require('mongoose');
 mongoose.connect(`mongodb://${config.db.host}/${config.db.dbName}`);
 
 // Import all models
-require('./models/file.model.js');
+require('./models/questions.model.js');
 
 const app = express();
 app.use(bodyParser.json()); // for parsing application/json

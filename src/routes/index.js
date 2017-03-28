@@ -1,7 +1,7 @@
 // src/routes/index.js
 const mongoose = require('mongoose');
 const router = require('express').Router();
-const fileController = require('./controllers/file.controller');
+const fileController = require('./controllers/questions.controller');
 const wineController = require('./controllers/wine.controller');
 
 module.exports = router;
