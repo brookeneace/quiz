@@ -1,1 +1,1 @@
-angular.module("fileListApp",["fileList"]);
+angular.module("wineListApp",["wineList"]);

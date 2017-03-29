@@ -2,13 +2,13 @@ const mongoose = require('mongoose');
 
 module.exports = {
 	list:function(req,res,next){
-		mongoose.model('Wine').find({}, function(err, files) {
+		mongoose.model('Wine').find({}, function(err, wines) {
 		if (err) {
 		console.log(err);
 		res.status(500).json(err);
 		}
 		
-		res.json(files);
+		res.json(wines);
 		});
 	},
 	

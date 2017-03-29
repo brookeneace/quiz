@@ -1,4 +1,4 @@
-angular.module("fileList").component("fileList",{
+angular.module("wineList").component("wineList",{
   templateUrl: "/js/template/wine.template.html",
   controller: function wineController($http){
     var self = this;

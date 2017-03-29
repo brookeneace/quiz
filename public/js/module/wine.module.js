@@ -1,4 +1,4 @@
-angular.module("fileList",[]);
+angular.module("wineList",[]);
 
 
 //responses object to print and save to database
