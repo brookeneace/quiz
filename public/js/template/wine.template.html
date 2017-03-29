@@ -1,18 +1,17 @@
 <form>
-<div class="question" ng-repeat="file in $ctrl.files">
-<h2>{{file.qname}}</h2>
+<div class="question" ng-repeat="wine in $ctrl.wines">
+<h2>{{wine.qname}}</h2>
 	<div class="row">
-	  <input type="radio" name="q{{$index + 1}}" value="1" id="q1{{$index + 1}}"> <label for="q1{{$index + 1}}">{{file.choose1}}</label>
-	  <input type="radio" name="q{{$index + 1}}" value="2" id="q2{{$index + 1}}"> <label for="q2{{$index + 1}}">{{file.choose2}}</label>
+	  <input type="radio" name="q{{$index + 1}}" value="1" id="q1{{$index + 1}}"> <label for="q1{{$index + 1}}">{{wine.choose1}}</label>
+	  <input type="radio" name="q{{$index + 1}}" value="2" id="q2{{$index + 1}}"> <label for="q2{{$index + 1}}">{{wine.choose2}}</label>
 	</div>
 	<div class="row">
-	  <input type="radio" name="q{{$index + 1}}" value="3" id="q3{{$index + 1}}"> <label for="q3{{$index + 1}}">{{file.choose3}}</label>
-	  <input type="radio" name="q{{$index + 1}}" value="4" id="q4{{$index + 1}}"> <label for="q4{{$index + 1}}">{{file.choose4}}</label>
+	  <input type="radio" name="q{{$index + 1}}" value="3" id="q3{{$index + 1}}"> <label for="q3{{$index + 1}}">{{wine.choose3}}</label>
+	  <input type="radio" name="q{{$index + 1}}" value="4" id="q4{{$index + 1}}"> <label for="q4{{$index + 1}}">{{wine.choose4}}</label>
 	</div>
 </div>
 <input type="button" value="Get Results" onclick='answerScore()' ng-click="wineAnswer = !wineAnswer">
 </form>
-<!-- public/js/template/file-list.template.html -->
 
 
 <div ng-show="wineAnswer" id="wineAnswer">

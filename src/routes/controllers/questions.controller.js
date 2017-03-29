@@ -2,18 +2,19 @@ const mongoose = require('mongoose');
 
 module.exports = {
 	list:function(req,res,next){
-		mongoose.model('File').find({}, function(err, files) {
+		mongoose.model('Question').find({}, function(err, questions) {
 		if (err) {
 		console.log(err);
 		res.status(500).json(err);
 		}
 		
-		res.json(files);
+		res.json(questions);
 		});
 	},
 	
 	
 // Create a quiz answer in the database
+/*
   create: function(req, res, next) {
     const newFile = req.body.file;
 
@@ -27,6 +28,7 @@ module.exports = {
       }
     });
   }
+*/
 
   
   

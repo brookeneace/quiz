@@ -1,7 +1,7 @@
 // Load mongoose package
 const mongoose = require('mongoose');
 
-const FileSchema = new mongoose.Schema({
+const QuestionSchema = new mongoose.Schema({
   qname: String,
   choose1: String,
   choose2: String,
@@ -16,23 +16,23 @@ const WineSchema = new mongoose.Schema({
   updated_at: { type: Date, default: Date.now },
 });
 
-const File = mongoose.model('File', FileSchema);
+const Question = mongoose.model('Question', QuestionSchema);
 
 const Wine = mongoose.model('Wine', WineSchema);
 
-module.exports = File
+module.exports = Question
 
 module.exports = Wine
 
-File.count({}, function(err, count) {
+Question.count({}, function(err, count) {
   if (err) {
     throw err;
   }
   // ...
   if (count > 0) return;
 
-	const files = require('./questions.seed.json');
-	File.create(files, function(err, newFiles) {
+	const questions = require('./questions.seed.json');
+	Question.create(questions, function(err, newQuestions) {
 		if (err) {
 			throw err;
 		}
